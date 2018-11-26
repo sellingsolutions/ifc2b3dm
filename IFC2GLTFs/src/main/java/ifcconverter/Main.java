@@ -65,7 +65,7 @@ public class Main {
 												 //Better to download directly from bimserver and put in the model folder
 
 			// Split the IFC files
-			IFCSplitter splitter = new IFCSplitter(client, "ifc2x3tc1");
+			IFCSplitter splitter = new IFCSplitter(client, "Ifc2x3tc1 (Streaming)", "Json (Streaming)");
 			
 			// Create the folder to store split IFC files
 			File ifcs_dir = new File(IFCS_PATH);
