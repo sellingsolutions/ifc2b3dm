@@ -36,7 +36,7 @@ public class IFCSplitter {
 		try {
 			IFCserializerOid = client.getServiceInterface().getSerializerByName("Ifc2x3tc1").getOid();
 			JSONserializerOid = client.getServiceInterface().getSerializerByName("Json (Streaming)").getOid();
-			System.out.println(JSONserializerOid);
+			System.out.println("JSONserializerOid " + JSONserializerOid);
 		} catch (ServerException | UserException | PublicInterfaceNotFoundException e) {
 			e.printStackTrace();
 		}

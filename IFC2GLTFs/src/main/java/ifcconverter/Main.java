@@ -36,11 +36,11 @@ import com.google.gson.stream.JsonReader;
  * 
  */
 public class Main {
-	private static String ADDRESS = "http://localhost:2020"; // Enter your BimServer address
-	private static String USERNAME = ""; //BimServer Username
-	private static String PASSWORD = ""; //BimServer Password
-	private static String PROJECT = "";  // Model name on BimServer
-	public static String CONVERTER_PATH = ""; //Enter your converter path
+	private static String ADDRESS = "http://zno.duckdns.org:8080"; // Enter your BimServer address
+	private static String USERNAME = "alexander@icontrolapp.se"; //BimServer User name
+	private static String PASSWORD = "solarwind11"; //BimServer Password
+	private static String PROJECT = "TEST3";  // Model name on BimServer
+	public static String CONVERTER_PATH = "C:\\Users\\zno\\Documents\\Conversions\\Conversion"; //Enter your converter path
 	public static String JSON_PATH = CONVERTER_PATH + PROJECT + "\\" + PROJECT + ".json";
 	public static String IFCS_PATH = CONVERTER_PATH + PROJECT + "\\" + "IFCs\\";
 	public static String OBJS_PATH = CONVERTER_PATH + PROJECT + "\\" + "OBJs\\";
@@ -48,6 +48,7 @@ public class Main {
 	public static String SJSONS_PATH = CONVERTER_PATH + PROJECT + "\\" + "SJSONs\\";
 	public static String OBJ2GLTFPATH = CONVERTER_PATH + "obj2gltf\\";
 	public static String NODE_PATH = "\"C:\\Program Files\\nodejs\\node.exe\"";
+
 	public static void main(String[] args) {
 		try {
 			// Connect to the server
