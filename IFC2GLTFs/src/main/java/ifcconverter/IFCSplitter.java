@@ -31,12 +31,16 @@ public class IFCSplitter {
 	int FlowTerminalsCount = 0;
 	int FurnishingElementsCount = 0; 
 	
-	public IFCSplitter(BimServerClient client) {
+	public IFCSplitter(BimServerClient client, String ifcSerializer, String jsonSerializer) {
+		
 		this.client = client;
-		try {
-			IFCserializerOid = client.getServiceInterface().getSerializerByName("Ifc2x3tc1").getOid();
-			JSONserializerOid = client.getServiceInterface().getSerializerByName("Json (Streaming)").getOid();
+		try {			
+			
+			IFCserializerOid = client.getServiceInterface().getSerializerByName(ifcSerializer).getOid();
+			JSONserializerOid = client.getServiceInterface().getSerializerByName(jsonSerializer).getOid();
+			System.out.println("IFCserializerOid " + IFCserializerOid);
 			System.out.println("JSONserializerOid " + JSONserializerOid);
+
 		} catch (ServerException | UserException | PublicInterfaceNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -93,14 +97,17 @@ public class IFCSplitter {
 		Path file = Paths.get(ifcpath,"wall" + WallsCount +".ifc");
 		Path jsonfile = Paths.get(jsonpath,"wall" + WallsCount +".json");
 		try {
-			if (!((new File (ifcpath + "wall" + WallsCount +".ifc")).exists()))
+			if (!((new File (ifcpath + "wall" + WallsCount +".ifc")).exists())) {
 				client.download(roid, query , IFCserializerOid , file );
-			if (!((new File (jsonpath + "wall" + WallsCount +".json")).exists()))
+			}
+			if (!((new File (jsonpath + "wall" + WallsCount +".json")).exists())) {
 				client.download(roid, query , JSONserializerOid , jsonfile );
+			}
 			WallsCount++;
 			
 		} catch (ServerException | UserException | PublicInterfaceNotFoundException | IOException e) {
 			e.printStackTrace();
+			System.exit(1);
 		}
 	}
 	

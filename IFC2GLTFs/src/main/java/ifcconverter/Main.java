@@ -39,8 +39,9 @@ public class Main {
 	private static String ADDRESS = "http://zno.duckdns.org:8080"; // Enter your BimServer address
 	private static String USERNAME = "alexander@icontrolapp.se"; //BimServer User name
 	private static String PASSWORD = "solarwind11"; //BimServer Password
-	private static String PROJECT = "TEST3";  // Model name on BimServer
-	public static String CONVERTER_PATH = "C:\\Users\\zno\\Documents\\Conversions\\Conversion"; //Enter your converter path
+	private static String PROJECT = "TEST4";  // Model name on BimServer
+	public static String CONVERTER_BASE_PATH= "C:\\Users\\zno\\Documents\\Conversions\\";
+	public static String CONVERTER_PATH = CONVERTER_BASE_PATH + "Conversion_"; //Enter your converter path
 	public static String JSON_PATH = CONVERTER_PATH + PROJECT + "\\" + PROJECT + ".json";
 	public static String IFCS_PATH = CONVERTER_PATH + PROJECT + "\\" + "IFCs\\";
 	public static String OBJS_PATH = CONVERTER_PATH + PROJECT + "\\" + "OBJs\\";
@@ -60,11 +61,11 @@ public class Main {
 			
 			// Get the Project Json
 			Long roid = client.getServiceInterface().getTopLevelProjectByName(PROJECT).getLastRevisionId();
-			//DownloadProjectJSON(client, roid); //Downloads malformed json on large models sometimes
+			DownloadProjectJSON(client, roid); //Downloads malformed json on large models sometimes
 												 //Better to download directly from bimserver and put in the model folder
 
 			// Split the IFC files
-			IFCSplitter splitter = new IFCSplitter(client);
+			IFCSplitter splitter = new IFCSplitter(client, "ifc2x3tc1");
 			
 			// Create the folder to store split IFC files
 			File ifcs_dir = new File(IFCS_PATH);
@@ -72,9 +73,7 @@ public class Main {
 			// And Json (Streaming)
 			File sjsons_dir = new File(SJSONS_PATH);
 			sjsons_dir.mkdir();
-	
-		
-			
+				
 			long ifcstartTime = System.currentTimeMillis();
 			
 			// Read the Json file and query download the IFC file of each component of the model 
@@ -84,7 +83,9 @@ public class Main {
 			
 			try {
 				reader.beginObject();
-				System.out.println(reader.nextName());
+				String name = reader.nextName();
+				System.out.println(name);
+				
 				reader.beginArray();
 
 				while (reader.hasNext()) {
@@ -95,8 +96,8 @@ public class Main {
 					reader.nextName(); //_t
 					String type = reader.nextString(); //type
 					
-					System.out.println(oid);
-					System.out.println(type);
+					//System.out.println(oid);
+					//System.out.println(type);
 
 					
 					if (type.equals("IfcWallStandardCase") || type.equals("IfcWall")) {
@@ -182,7 +183,7 @@ public class Main {
 			        ifcconvertcopy_p = ifcconvertcopy_builder.start();
 		            BufferedWriter ifcconvertcopy_p_stdin = 
 		  		          new BufferedWriter(new OutputStreamWriter(ifcconvertcopy_p.getOutputStream()));
-		            ifcconvertcopy_p_stdin.write("cd " + CONVERTER_PATH);
+		            ifcconvertcopy_p_stdin.write("cd " + CONVERTER_BASE_PATH);
 		            ifcconvertcopy_p_stdin.newLine();
 		            ifcconvertcopy_p_stdin.flush();
 			        
@@ -301,8 +302,8 @@ public class Main {
 			long totalgltfTime = gltfendTime - gltfstartTime;
 			System.out.println("Total Time to convert the OBJ files to GLTF : " + totalgltfTime + "ms");
 			
-			//long totalTime = totalifcTime + totalobjTime + totalgltfTime;
-			//System.out.println("Total Conversion Time : " + totalTime + "ms");
+			long totalTime = totalifcTime + totalobjTime + totalgltfTime;
+			System.out.println("Total Conversion Time : " + totalTime + "ms");
 
 		} catch (BimServerClientException | ServiceException | ChannelConnectionException e) {
 			e.printStackTrace();
@@ -316,6 +317,8 @@ public class Main {
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
+		
+		System.exit(0);
 	}
 	
 	public static void DownloadProjectJSON(BimServerClient client, Long roid) {
@@ -330,7 +333,6 @@ public class Main {
 		} catch (BimServerClientException e) {
 			e.printStackTrace();
 		}
-
-
 	}
+	
 }

@@ -7,7 +7,7 @@
 		<dependency>
 			<groupId>org.opensourcebim</groupId>
 			<artifactId>bimserverclientlib</artifactId>
-			<version>1.5.92</version>
+			<version>1.5.117</version>
 		</dependency>
   </dependencies>
 </project>
