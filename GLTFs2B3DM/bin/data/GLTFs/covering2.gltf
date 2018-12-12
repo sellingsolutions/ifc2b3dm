@@ -1,0 +1,168 @@
+{
+  "accessors": [
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a96-body_1_0_positions",
+      "componentType": 5126,
+      "count": 24,
+      "min": [
+        1.6676515340805054,
+        -1.1014176607131958,
+        2.200000047683716
+      ],
+      "max": [
+        6.120151519775391,
+        0.8510823249816895,
+        2.256999969482422
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a96-body_1_0_normals",
+      "componentType": 5126,
+      "count": 24,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a96-body_1_0_indices",
+      "componentType": 5123,
+      "count": 36,
+      "min": [
+        0
+      ],
+      "max": [
+        23
+      ],
+      "type": "SCALAR",
+      "bufferView": 2,
+      "byteOffset": 0
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "covering2",
+      "byteLength": 648,
+      "uri": "data:application/octet-stream;base64,SNjDQIjgWT+wchBASNjDQIjgWT/NzAxAm3XVP4jgWT/NzAxAm3XVP4jgWT+wchBAm3XVP4jgWT+wchBAm3XVP4jgWT/NzAxAm3XVP0H7jL/NzAxAm3XVP0H7jL+wchBAm3XVP0H7jL+wchBAm3XVP0H7jL/NzAxASNjDQEH7jL/NzAxASNjDQEH7jL+wchBASNjDQEH7jL+wchBASNjDQEH7jL/NzAxASNjDQIjgWT/NzAxASNjDQIjgWT+wchBAm3XVP4jgWT/NzAxASNjDQIjgWT/NzAxAm3XVP0H7jL/NzAxASNjDQEH7jL/NzAxAm3XVP0H7jL+wchBASNjDQIjgWT+wchBAm3XVP4jgWT+wchBASNjDQEH7jL+wchBAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAvwAAAIAAAACAAACAvwAAAIAAAACAAACAvwAAAIAAAACAAACAvwAAAIAAAACAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAABAAIAAwAAAAIABAAFAAYABwAEAAYACAAJAAoACwAIAAoADAANAA4ADwAMAA4AEAARABIAEQATABIAFAAVABYAFAAXABUA"
+    }
+  ],
+  "bufferViews": [
+    {
+      "name": "bufferView_0",
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_1",
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 288,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_2",
+      "buffer": 0,
+      "byteLength": 72,
+      "byteOffset": 576,
+      "target": 34963
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_common"
+  ],
+  "extensionsRequired": [
+    "KHR_materials_common"
+  ],
+  "materials": [
+    {
+      "name": "surface-style-27-gypsum-wall-board",
+      "extensions": {
+        "KHR_materials_common": {
+          "technique": "PHONG",
+          "transparent": false,
+          "doubleSided": false,
+          "values": {
+            "ambient": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "diffuse": [
+              0.976470588235294,
+              0.976470588235294,
+              0.976470588235294,
+              1
+            ],
+            "emission": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "specular": [
+              0.5,
+              0.5,
+              0.5,
+              1
+            ],
+            "shininess": 128,
+            "transparency": 1,
+            "transparent": false,
+            "doubleSided": false
+          }
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a96-body_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a96-body",
+      "mesh": 0
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

@@ -25,8 +25,7 @@ public class GltfThread extends Thread {
 		
         try {
 			gltf_p = gltf_builder.start();
-			gltf_p_stdin = 
-	  		          new BufferedWriter(new OutputStreamWriter(gltf_p.getOutputStream()));
+			gltf_p_stdin = new BufferedWriter(new OutputStreamWriter(gltf_p.getOutputStream()));
 	        gltf_p_stdin.write("cd " + Main.OBJ2GLTFPATH);
 	        gltf_p_stdin.newLine();
 		    gltf_p_stdin.flush();
@@ -46,9 +45,16 @@ public class GltfThread extends Thread {
 		
 		try {
 			for (int i=fobjstart; i<fobjend;i++) {
-	        	System.out.println(ifcs[i].getName().split(".ifc")[0]);
-	        	if (!((new File (Main.GLTFS_PATH + ifcs[i].getName().split(".ifc")[0] + ".gltf")).exists())) {
-		        	gltf_p_stdin.write(Main.NODE_PATH + " bin\\\\obj2gltf.js -i \"" + Main.OBJS_PATH + ifcs[i].getName().split(".ifc")[0] +".obj\" -o \"" + Main.GLTFS_PATH + ifcs[i].getName().split(".ifc")[0] + ".gltf\" --materialsCommon");
+				String ifcFileName = ifcs[i].getName().split(".ifc")[0];
+	        	System.out.println(ifcFileName);
+	        	
+	        	String gltfFileName = Main.GLTFS_PATH + ifcs[i].getName().split(".ifc")[0] + ".gltf";
+	        	
+	        	if (!((new File (gltfFileName).exists()))) {
+	        		String command = "node.exe " + Main.OBJ2GLTFPATH + "bin\\obj2gltf.js " + "-i \"" + Main.OBJS_PATH + ifcs[i].getName().split(".ifc")[0] +".obj\" -o \"" + Main.GLTFS_PATH + ifcs[i].getName().split(".ifc")[0] + ".gltf\" --materialsCommon";
+		        	System.out.println(command);
+		        	
+	        		gltf_p_stdin.write(command);
 		        	// --materialsCommon flag for compatibility with Cesium
 	            	gltf_p_stdin.newLine();
 		            gltf_p_stdin.flush();

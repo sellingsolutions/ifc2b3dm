@@ -47,7 +47,7 @@ public class Main {
 	public static String OBJS_PATH = CONVERTER_PATH + PROJECT + "\\" + "OBJs\\";
 	public static String GLTFS_PATH = CONVERTER_PATH + PROJECT + "\\" + "GLTFs\\";
 	public static String SJSONS_PATH = CONVERTER_PATH + PROJECT + "\\" + "SJSONs\\";
-	public static String OBJ2GLTFPATH = CONVERTER_PATH + "obj2gltf\\";
+	public static String OBJ2GLTFPATH = CONVERTER_BASE_PATH + "obj2gltf\\";
 	public static String NODE_PATH = "\"C:\\Program Files\\nodejs\\node.exe\"";
 
 	public static void main(String[] args) {
@@ -222,8 +222,8 @@ public class Main {
 					else
 						fifcend = fifcstart + ifcstepsize;
 					
-					//System.out.println("fifcstart = " + fifcstart);
-					//System.out.println("fifcend = " + fifcend);
+					System.out.println("fifcstart = " + fifcstart);
+					System.out.println("fifcend = " + fifcend);
 					
 					ObjThread t = new ObjThread(ifcs,fifcstart,fifcend);
 					objExecutor.submit(t);
@@ -233,6 +233,7 @@ public class Main {
 		        	objExecutor.awaitTermination(1, TimeUnit.HOURS);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
+					System.exit(1);
 				}
 				
 				// init shell
@@ -265,6 +266,7 @@ public class Main {
 	 			}
 	        } catch (IOException e) {
 	            System.out.println(e);
+				System.exit(1);
 	        }
 			long objendTime = System.currentTimeMillis();
 			long totalobjTime = objendTime - objstartTime;

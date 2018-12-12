@@ -1,0 +1,168 @@
+{
+  "accessors": [
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a78-body_1_0_positions",
+      "componentType": 5126,
+      "count": 36,
+      "min": [
+        -7.734848499298096,
+        -1.2464176416397095,
+        2.200000047683716
+      ],
+      "max": [
+        1.5726515054702759,
+        4.4085822105407715,
+        2.256999969482422
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a78-body_1_0_normals",
+      "componentType": 5126,
+      "count": 36,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a78-body_1_0_indices",
+      "componentType": 5123,
+      "count": 60,
+      "min": [
+        0
+      ],
+      "max": [
+        35
+      ],
+      "type": "SCALAR",
+      "bufferView": 2,
+      "byteOffset": 0
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "covering0",
+      "byteLength": 984,
+      "uri": "data:application/octet-stream;base64,4YP3wJ2Kn7+wchBA4YP3wJ2Kn7/NzAxAKG41wJ2Kn7/NzAxAKG41wJ2Kn7+wchBAKG41wJ2Kn7+wchBAKG41wJ2Kn7/NzAxAKG41wEH7jL/NzAxAKG41wEH7jL+wchBAKG41wEH7jL+wchBAKG41wEH7jL/NzAxApUzJP0H7jL/NzAxApUzJP0H7jL+wchBApUzJP0H7jL+wchBApUzJP0H7jL/NzAxApUzJPxsTjUDNzAxApUzJPxsTjUCwchBApUzJPxsTjUCwchBApUzJPxsTjUDNzAxA4YP3wBsTjUDNzAxA4YP3wBsTjUCwchBA4YP3wBsTjUCwchBA4YP3wBsTjUDNzAxA4YP3wJ2Kn7/NzAxA4YP3wJ2Kn7+wchBAKG41wJ2Kn7/NzAxA4YP3wJ2Kn7/NzAxAKG41wEH7jL/NzAxA4YP3wBsTjUDNzAxApUzJP0H7jL/NzAxApUzJPxsTjUDNzAxAKG41wEH7jL+wchBA4YP3wJ2Kn7+wchBAKG41wJ2Kn7+wchBA4YP3wBsTjUCwchBApUzJPxsTjUCwchBApUzJP0H7jL+wchBAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAoFsjJwAAgL8AAAAAoFsjJwAAgL8AAAAAoFsjJwAAgL8AAAAAoFsjJwAAgL8AAAAAAACAPw+J/yYAAAAAAACAPw+J/yYAAAAAAACAPw+J/yYAAAAAAACAPw+J/yYAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAv7P7+KYAAACAAACAv7P7+KYAAACAAACAv7P7+KYAAACAAACAv7P7+KYAAACAAAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAABAAIAAwAAAAIABAAFAAYABwAEAAYACAAJAAoACwAIAAoADAANAA4ADwAMAA4AEAARABIAEwAQABIAFAAVABYAFwAUABYAGAAZABoAGgAZABsAHAAaAB0AGgAbAB0AHgAfACAAIQAfAB4AIgAeACMAIgAhAB4A"
+    }
+  ],
+  "bufferViews": [
+    {
+      "name": "bufferView_0",
+      "buffer": 0,
+      "byteLength": 432,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_1",
+      "buffer": 0,
+      "byteLength": 432,
+      "byteOffset": 432,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_2",
+      "buffer": 0,
+      "byteLength": 120,
+      "byteOffset": 864,
+      "target": 34963
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_common"
+  ],
+  "extensionsRequired": [
+    "KHR_materials_common"
+  ],
+  "materials": [
+    {
+      "name": "surface-style-30-gypsum-wall-board",
+      "extensions": {
+        "KHR_materials_common": {
+          "technique": "PHONG",
+          "transparent": false,
+          "doubleSided": false,
+          "values": {
+            "ambient": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "diffuse": [
+              0.976470588235294,
+              0.976470588235294,
+              0.976470588235294,
+              1
+            ],
+            "emission": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "specular": [
+              0.5,
+              0.5,
+              0.5,
+              1
+            ],
+            "shininess": 128,
+            "transparency": 1,
+            "transparent": false,
+            "doubleSided": false
+          }
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a78-body_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "product-e67aebc3-0bcc-49d1-b719-e4b4dff20a78-body",
+      "mesh": 0
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "accessors": [
+    {
+      "name": "product-f1dcff5c-e2fc-4d5e-8684-c53d56aa6637-body_1_0_positions",
+      "componentType": 5126,
+      "count": 36,
+      "min": [
+        -7.734848499298096,
+        -1.2464176416397095,
+        2.3350000381469727
+      ],
+      "max": [
+        6.232651710510254,
+        4.521082401275635,
+        2.5
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "name": "product-f1dcff5c-e2fc-4d5e-8684-c53d56aa6637-body_1_0_normals",
+      "componentType": 5126,
+      "count": 36,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "name": "product-f1dcff5c-e2fc-4d5e-8684-c53d56aa6637-body_1_0_indices",
+      "componentType": 5123,
+      "count": 60,
+      "min": [
+        0
+      ],
+      "max": [
+        35
+      ],
+      "type": "SCALAR",
+      "bufferView": 2,
+      "byteOffset": 0
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "slab1",
+      "byteLength": 984,
+      "uri": "data:application/octet-stream;base64,4YP3wJ2Kn7+kcBVA4YP3wJ2Kn78AACBA4YP3wLWskEAAACBA4YP3wLWskECkcBVA4YP3wLWskECkcBVA4YP3wLWskEAAACBA4nHHQLWskEAAACBA4nHHQLWskECkcBVA4nHHQLWskECkcBVA4nHHQLWskEAAACBA4nHHQKdhm78AACBA4nHHQKdhm7+kcBVA4nHHQKdhm7+kcBVA4nHHQKdhm78AACBAKG41wKdhm78AACBAKG41wKdhm7+kcBVAKG41wKdhm7+kcBVAKG41wKdhm78AACBAKG41wJ2Kn78AACBAKG41wJ2Kn7+kcBVAKG41wJ2Kn7+kcBVAKG41wJ2Kn78AACBA4YP3wJ2Kn78AACBA4YP3wJ2Kn7+kcBVA4YP3wJ2Kn78AACBAKG41wJ2Kn78AACBAKG41wKdhm78AACBA4YP3wLWskEAAACBA4nHHQKdhm78AACBA4nHHQLWskEAAACBAKG41wKdhm7+kcBVAKG41wJ2Kn7+kcBVA4YP3wJ2Kn7+kcBVA4YP3wLWskECkcBVA4nHHQLWskECkcBVA4nHHQKdhm7+kcBVAAACAvwAAAIAAAACAAACAvwAAAIAAAACAAACAvwAAAIAAAACAAACAvwAAAIAAAACAy38ZJwAAgD8AAAAAy38ZJwAAgD8AAAAAy38ZJwAAgD8AAAAAy38ZJwAAgD8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAVPASpwAAgL8AAAAAVPASpwAAgL8AAAAAVPASpwAAgL8AAAAAVPASpwAAgL8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAABAAIAAwAAAAIABAAFAAYABwAEAAYACAAJAAoACwAIAAoADAANAA4ADwAMAA4AEAARABIAEwAQABIAFAAVABYAFwAUABYAGAAZABoAGAAaABsAGgAcAB0AGwAaAB0AHgAfACAAIQAeACAAIgAjAB4AIgAeACEA"
+    }
+  ],
+  "bufferViews": [
+    {
+      "name": "bufferView_0",
+      "buffer": 0,
+      "byteLength": 432,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_1",
+      "buffer": 0,
+      "byteLength": 432,
+      "byteOffset": 432,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_2",
+      "buffer": 0,
+      "byteLength": 120,
+      "byteOffset": 864,
+      "target": 34963
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_common"
+  ],
+  "extensionsRequired": [
+    "KHR_materials_common"
+  ],
+  "materials": [
+    {
+      "name": "surface-style-92-concrete-masonry,-floor-block",
+      "extensions": {
+        "KHR_materials_common": {
+          "technique": "PHONG",
+          "transparent": false,
+          "doubleSided": false,
+          "values": {
+            "ambient": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "diffuse": [
+              0.709803921568627,
+              0.709803921568627,
+              0.709803921568627,
+              1
+            ],
+            "emission": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "specular": [
+              0.5,
+              0.5,
+              0.5,
+              1
+            ],
+            "shininess": 128,
+            "transparency": 1,
+            "transparent": false,
+            "doubleSided": false
+          }
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "product-f1dcff5c-e2fc-4d5e-8684-c53d56aa6637-body_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "product-f1dcff5c-e2fc-4d5e-8684-c53d56aa6637-body",
+      "mesh": 0
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
